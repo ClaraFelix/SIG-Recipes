@@ -9,13 +9,51 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include<string.h>
+
+//Teste tela de cadastrar receitas (testando o compilador)
+
+void main(void){
+    void telaCadastrarReceitas(void);
+
+    char nome_receita[20];
+
+    struct listar_ingredientes{
+        char nome[20];
+        int quantidade_ing;
+        char ing[100];
+    };
+
+//Solicita ao usuário que cadastre uma receita
+struct lista_ingredientes receita[1];
+
+for(int x=0;x<1;x++){                          
+        printf("Digite o nome da receita que deseja cadstrar: ");
+        scanf("%20[^\n]",&receita[x].nome); //O nome da receita deverá contar menos que 20 caracteres
+        fflush(stdin);
+        printf("Quantos ingredientes essa receita é composta? ");
+        scanf("%i",&receita[x].quantidade_ing);
+        fflush(stdin);
+
+        //Armazena os ingredientes que o usuário irá digitar, baseado na quantidade de ingredientes acima 
+
+        char ingredientes[receita[x].quantidade_ing][20];
+            for(int y=0;y<receita[x].quantidade_ing;y++){
+                printf("Digite o ingrediente %i da receita %i: ",y+1,x+1);
+                scanf("%20[^\n]",&ingredientes[y]);
+                fflush(stdin);
+            }
+
+}
+
+    
 
 
 
 /////
 // Assinatura das funções
 
-void telaSobreSIG(void);
+/*void telaSobreSIG(void);
 void telaMain(void);
 void telaEquipe(void);
 void telaMenuReceitas(void);
@@ -29,7 +67,7 @@ void telaExcluirReceita(void);
 /////
 // Programa principal
 
-int main(void) {
+//int main(void) {
     telaSobreSIG();
     telaMain();
     telaEquipe();
@@ -39,14 +77,14 @@ int main(void) {
     telaEditarReceita();
     telaExcluirReceita();
     return 0;
-}
+}*/
 
 
 
 /////
 // Funções
 
-void telaSobreSIG(void) {
+/*void telaSobreSIG(void) {
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -292,4 +330,4 @@ void telaExcluirReceita(void) {
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
-}
+}*/
