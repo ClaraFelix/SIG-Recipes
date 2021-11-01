@@ -15,7 +15,7 @@
 /////
 // Assinatura das funções
 
-void telaSobreSIG(void);
+/*void telaSobreSIG(void);
 void telaMain(void);
 void telaEquipe(void);
 void telaMenuReceitas(void);
@@ -29,7 +29,7 @@ void telaExcluirReceita(void);
 /////
 // Programa principal
 
-int main(void) {
+//int main(void) {
     telaSobreSIG();
     telaMain();
     telaEquipe();
@@ -39,14 +39,14 @@ int main(void) {
     telaEditarReceita();
     telaExcluirReceita();
     return 0;
-}
+}*/
 
 
 
 /////
 // Funções
 
-void telaSobreSIG(void) {
+/*void telaSobreSIG(void) {
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -292,4 +292,4 @@ void telaExcluirReceita(void) {
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
-}
+}*/

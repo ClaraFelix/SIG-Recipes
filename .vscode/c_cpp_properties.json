@@ -1,7 +1,7 @@
 {
   "configurations": [
     {
-      "name": "windows-gcc-x64",
+      "name": "windows-gcc-x86",
       "includePath": [
         "${workspaceFolder}/**"
       ],
@@ -12,13 +12,13 @@
       ],
       "cStandard": "c17",
       "cppStandard": "c++17",
-      "intelliSenseMode": "windows-gcc-x64",
+      "intelliSenseMode": "windows-gcc-x86",
       "compilerArgs": [
         "-Wall",
         "-Wextra",
         "-Wpedantic"
       ],
-      "compilerPath": "C:\\msys64\\mingw64\\bin\\gcc.exe"
+      "compilerPath": "C:\\MinGW\\bin\\gcc.exe"
     },
     {
       "name": "stdio.h",
