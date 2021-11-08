@@ -9,7 +9,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include<string.h>
+#include <string.h>
 
 // Assinatura das funções
 void telaSobreSIG(void);
@@ -23,6 +23,8 @@ void telaExcluirReceita(void);
 // Programa principal
 int main(void) {
    telaSobreSIG();
+   telaMain();
+   telaEquipe();
    telaMenuReceitas();
    telaCadastrarReceitas();
    telaBuscarReceita();
@@ -54,7 +56,7 @@ void telaSobreSIG(void) {
     printf("/// tual para armazenamento de receitas e posterior consultas. Tem por      ///\n");
     printf("/// objetivo o desenvolvimento de um programa/projeto, utilizando-se da     ///\n");
     printf("/// linguagem C, onde o usuário poderá cadastrar e armazenar suas receitas, ///\n"); 
-    printf("///  de forma semelhante a um caderno de anotações e/ou bloco de notas.     ///\n");
+    printf("/// de forma semelhante a um caderno de anotações e/ou bloco de notas.      ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -65,7 +67,7 @@ void telaSobreSIG(void) {
 
 
 
-/*void telaMain(void) {
+void telaMain(void) {
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -125,9 +127,68 @@ void telaEquipe(void) {
     getchar();
 }
 
+void telaCadastrarReceita(void) {
+
+    char nome_receita[20];
+
+    struct listar_ingredientes{
+        char nome[20];
+        int quantidade_ing;
+        char ing[100];
+    };
+
+    //Solicita ao usuário que cadastre uma receita (armazena até 10 receitas)
+    struct lista_ingredientes receita[10]; 
+}
 
 
-void telaMenuReceitas(void) {
+    system("clear||cls");
+    printf("\n");
+    printf("/////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                       ///\n");
+    printf("///          ===================================================          ///\n");
+    printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+    printf("///     = SIG-Recipes: Um Caderno Virtual de Receitas Culinárias =        ///\n");
+    printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+    printf("///          ===================================================          ///\n");
+    printf("///                Developed by  @clarafelix - Out, 2021                  ///\n");
+    printf("///                                                                       ///\n");
+    printf("/////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                       ///\n");
+    printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+    printf("///           = = = = = = = = Cadastrar Receita = = = = = = =             ///\n");
+    printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+    printf("///                                                                       ///\n");
+    printf("///                                                                        ///\n");
+    
+    for(int x=0;x<1;x++){ 
+    printf("Digite o nome da receita que deseja cadstrar: ");
+        scanf("%20[^\n]",&receita[x].nome); //O nome da receita deverá contar menos que 20 caracteres
+        fflush(stdin);
+
+    printf("Quantos ingredientes essa receita é composta? ");
+        scanf("%i",&receita[x].quantidade_ing);
+        fflush(stdin);    
+
+    //Armazena os ingredientes que o usuário irá digitar, baseado na quantidade de ingredientes acima
+     char ingredientes[receita[x].quantidade_ing][20];
+            for(int y=0;y<receita[x].quantidade_ing;y++){
+                printf("Digite o ingrediente %i da receita %i: ",y+1,x+1);
+                scanf("%20[^\n]",&ingredientes[y]);
+                fflush(stdin);
+            }
+    
+    printf("///           Tempo de preparo:                                          ///\n");
+    printf("///           Modo de preparo:                                             ///\n");
+    printf("///                                                                       ///\n");
+    printf("///                                                                       ///\n");
+    printf("/////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+/*void telaMenuReceitas(void) {
     system("clear||cls");
     printf("\n");
     printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -159,40 +220,6 @@ void telaMenuReceitas(void) {
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
 }
-
-
-
-void telaCadastrarReceita(void) {
-    system("clear||cls");
-    printf("\n");
-    printf("/////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                       ///\n");
-    printf("///          ===================================================          ///\n");
-    printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
-    printf("///     = SIG-Recipes: Um Caderno Virtual de Receitas Culinárias =        ///\n");
-    printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
-    printf("///          ===================================================          ///\n");
-    printf("///                Developed by  @clarafelix - Out, 2021                  ///\n");
-    printf("///                                                                       ///\n");
-    printf("/////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                       ///\n");
-    printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
-    printf("///           = = = = = = = = Cadastrar Receita = = = = = = =             ///\n");
-    printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
-    printf("///                                                                       ///\n");
-    printf("///                                                                        ///\n");
-    printf("///           Nome da receita:                                              ///\n");
-    printf("///           Ingredientes:                                                ///\n");
-    printf("///           Tempo de preparo:                                          ///\n");
-    printf("///           Modo de preparo:                                             ///\n");
-    printf("///                                                                       ///\n");
-    printf("///                                                                       ///\n");
-    printf("/////////////////////////////////////////////////////////////////////////////\n");
-    printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-}
-
 
 
 void telaBuscarReceita(void) {
