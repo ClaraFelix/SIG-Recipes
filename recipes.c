@@ -12,18 +12,61 @@
 #include <string.h>
 
 // Assinatura das funções
-void telaSobreSIG(void);
+/*void telaSobreSIG(void);
 void telaMain(void);
 void telaMenuReceitas(void);
 void telaCadastrarReceitas(void);
 void telaBuscarReceita(void);
 void telaEditarReceita(void);
-void telaExcluirReceita(void);
+void telaExcluirReceita(void);*/
 
 // Programa principal
-int main(void) {
-   telaSobreSIG();
+
+void main(void){
+    char nome_receita[20];
+
+    struct recipes
+    {
+        char nome[20];
+        int quantidade_ingredientes;
+        char ingredientes[100];
+    };
+    
+    struct recipes receitas[1];
+    for(int x=0; x<1;){
+        //O nome que o usuário escolher para a receita deverá conter pelo menos 20 caracteres
+        printf("Digite o nome da receita que deseja cadastrar no Sig-Recipes: ");
+            scanf("%20[^\n]", &receitas[x].nome); 
+            fflush(stdin);
+
+        printf("Quantos ingredientes essa receita é composta? ");
+            scanf("%i", &receitas[x].quantidade_ingredientes);
+            fflush(stdin);
+
+    //Deverá armazenar os ingredientes que o usuário irá digitar, baseado na quantidade de ingredientes listados acima
+    char ingredientes[receitas[x].quantidade_ingredientes][20];
+        for (int i = 0; i < receitas[x].quantidade_ingredientes; i++)
+        {
+            printf("Digite o ingrediente %i da receita %i: ",i+1, x+1); //Enumera a lista de ingredientes passada pelo usuário
+            scanf("%20[^\n]", &ingredientes[i]);
+            fflush(stdin);
+        }
+
+        //Faz a contagem e implementação
+        int tamanho=0;
+            for (int i = 0; i < receitas[x].quantidade_ingredientes; i++)
+            {
+                tamanho++;
+            }
+    }   
+        
+    }
+
+
+/*int main(void) {
+   telaCadastrarReceitas();
    telaMain();
+   telaSobreSIG();
    telaEquipe();
    telaMenuReceitas();
    telaCadastrarReceitas();
@@ -35,9 +78,22 @@ int main(void) {
 
 // Funções
 
-void telaSobreSIG(void) {
+void telacadastrarReceitas(void) {
+  
+    char nome_receita[20];
+
+    struct listar_ingredientes{
+        char nome[20];
+        int quantidade_ingredientes;
+        char ing[100];
+    };
+
+    //Solicita ao usuário que cadastre uma receita (armazena até 10 receitas)
+    struct lista_ingredientes receita[10]; 
+}
+
     system("clear||cls");
-    printf("\n");
+    printf("\n");5
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///             Universidade Federal do Rio Grande do Norte                 ///\n");
@@ -127,20 +183,6 @@ void telaEquipe(void) {
     getchar();
 }
 
-void telaCadastrarReceita(void) {
-
-    char nome_receita[20];
-
-    struct listar_ingredientes{
-        char nome[20];
-        int quantidade_ing;
-        char ing[100];
-    };
-
-    //Solicita ao usuário que cadastre uma receita (armazena até 10 receitas)
-    struct lista_ingredientes receita[10]; 
-}
-
 
     system("clear||cls");
     printf("\n");
@@ -188,7 +230,7 @@ void telaCadastrarReceita(void) {
     getchar();
 }
 
-/*void telaMenuReceitas(void) {
+void telaMenuReceitas(void) {
     system("clear||cls");
     printf("\n");
     printf("/////////////////////////////////////////////////////////////////////////////\n");
