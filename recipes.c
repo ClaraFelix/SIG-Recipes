@@ -58,6 +58,16 @@ void main(void){
             {
                 tamanho++;
             }
+
+        //Salvando e agrupando as informações que serão exibidas no struct, armazenando em um só vetor 
+        char ingredientes0[200]=" ";
+            for (int i = 0; i < tamanho; i++)
+            {
+                strcat(ingredientes, "");
+                strcat(ingredientes0, ingredientes[i]);
+            }
+            strcpy(receitas[x].ingredientes, ingredientes0);
+            
     }   
         
     }
