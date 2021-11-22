@@ -60,6 +60,46 @@ int main(void) {
 }
 
 
+/// Funções presentes no módulo principal
+
+
+char telaPrincipal(void) {
+
+    char alt;
+
+    system("clear||cls");
+    printf("\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///             Universidade Federal do Rio Grande do Norte                 ///\n");
+    printf("///                 Centro de Ensino Superior do Seridó                     ///\n");
+    printf("///               Departamento de Computação e Tecnologia                   ///\n");
+    printf("///                  Disciplina DCT1106 -- Programação                      ///\n");
+    printf("///          SIG-Recipes: Um Caderno Virtual de Receitas Culinárias         ///\n");
+    printf("///                Developed by  @clarafelix - Out, 2021                    ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///                     = = = = = SIG-Recipes = = = = =                     ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            1. Módulo Receitas                                           ///\n");
+    printf("///            2. Módulo Cozinheiro                                         ///\n");
+    printf("///            3. Módulo Sobre                                              ///\n");
+    printf("///            0. Sair                                                      ///\n");
+
+    printf("///            Escolha um dos módulos indicados: ");
+    scanf("%c", &alt);
+    getchar();
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t<<< ... Aguarde ... >>>\n");
+    sleep(1);
+
+    return alt;
+
+    }
+
 
 
 void main(void){
@@ -113,22 +153,10 @@ void main(void){
     }
 
 
-/*int main(void) {
-   telaCadastrarReceitas();
-   telaMain();
-   telaSobreSIG();
-   telaEquipe();
-   telaMenuReceitas();
-   telaCadastrarReceitas();
-   telaBuscarReceita();
-   telaEditarReceita();
-   telaExcluirReceita();
-   return 0;
-}
 
 // Funções
 
-void telacadastrarReceitas(void) {
+/*void telacadastrarReceitas(void) {
   
     char nome_receita[20];
 
@@ -173,38 +201,12 @@ void telacadastrarReceitas(void) {
 
 
 
-void telaMain(void) {
-    system("clear||cls");
-    printf("\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                         ///\n");
-    printf("///             Universidade Federal do Rio Grande do Norte                 ///\n");
-    printf("///                 Centro de Ensino Superior do Seridó                     ///\n");
-    printf("///               Departamento de Computação e Tecnologia                   ///\n");
-    printf("///                  Disciplina DCT1106 -- Programação                      ///\n");
-    printf("///          SIG-Recipes: Um Caderno Virtual de Receitas Culinárias         ///\n");
-    printf("///                Developed by  @clarafelix - Out, 2021                    ///\n");
-    printf("///                                                                         ///\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                         ///\n");
-    printf("///                     = = = = = SIG-Recipes = = = = =                     ///\n");
-    printf("///                                                                         ///\n");
-    printf("///            1. Módulo Receitas                                           ///\n");
-    printf("///            2. Módulo Cozinheiro                                         ///\n");
-    printf("///            3. Módulo Cadastrar receita                                  ///\n");
-    printf("///            4. Módulo Editar receita                                     ///\n");
-    printf("///            5. Módulo Sobre                                              ///\n");
-    printf("///            0. Sair                                                      ///\n");
-    printf("///                                                                         ///\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-}
+
+    
 
 
 
-void telaEquipe(void) {
+/*void telaEquipe(void) {
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
