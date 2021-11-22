@@ -11,16 +11,56 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Assinatura das funções
-/*void telaSobreSIG(void);
-void telaMain(void);
+// Assinatura das funções em módulos
+
+void telaPrincipal(void);
+void telaSobre(void);
+void telaEquipe(void);
+
+
+void moduloReceitas(void);
 void telaMenuReceitas(void);
 void telaCadastrarReceitas(void);
 void telaBuscarReceita(void);
 void telaEditarReceita(void);
-void telaExcluirReceita(void);*/
+void telaExcluirReceita(void);
+
+void moduloCozinheiros(void);
+void telaMenuCozinheiros(void);
+void telaCadastrarCozinheiros(void);
+void telaBuscarCozinheiros(void);
+void telaEditarCozinheiros(void);
+void telaExcluirCozinheiros(void);
 
 // Programa principal
+
+int main(void) {
+    char alternativa;
+
+    do
+    {
+        alternativa = telaMenuReceitas();
+        switch (alternativa)
+        {
+        case '1': moduloReceitas();
+            break;
+
+        case '2': moduloCozinheiros();
+            break;
+
+        case '3': telaSobre();
+                  telaEquipe();
+            break;
+        
+        }
+    } while (alternativa != '0');
+
+    return 0;
+    
+}
+
+
+
 
 void main(void){
     char nome_receita[20];
