@@ -11,18 +11,198 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Assinatura das funções
-/*void telaSobreSIG(void);
-void telaMain(void);
+// Assinatura das funções em módulos
+
+void telaPrincipal(void);
+void telaSobre(void);
+void telaEquipe(void);
+
+
+void moduloReceitas(void);
 void telaMenuReceitas(void);
 void telaCadastrarReceitas(void);
 void telaBuscarReceita(void);
 void telaEditarReceita(void);
-void telaExcluirReceita(void);*/
+void telaExcluirReceita(void);
+
+void moduloCozinheiros(void);
+void telaMenuCozinheiros(void);
+void telaCadastrarCozinheiros(void);
+void telaBuscarCozinheiros(void);
+void telaEditarCozinheiros(void);
+void telaExcluirCozinheiros(void);
 
 // Programa principal
 
-void main(void){
+int main(void) {
+    char alternativa;
+
+    do
+    {
+        alternativa = telaMenuReceitas();
+        switch (alternativa)
+        {
+        case '1': moduloReceitas();
+            break;
+
+        case '2': moduloCozinheiros();
+            break;
+
+        case '3': telaSobre();
+                  telaEquipe();
+            break;
+        
+        }
+    } while (alternativa != '0');
+
+    return 0;
+    
+}
+
+
+/// Funções presentes no módulo principal
+
+
+char telaPrincipal(void) {
+
+    char alt;
+
+    system("clear||cls");
+    printf("\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///             Universidade Federal do Rio Grande do Norte                 ///\n");
+    printf("///                 Centro de Ensino Superior do Seridó                     ///\n");
+    printf("///               Departamento de Computação e Tecnologia                   ///\n");
+    printf("///                  Disciplina DCT1106 -- Programação                      ///\n");
+    printf("///          SIG-Recipes: Um Caderno Virtual de Receitas Culinárias         ///\n");
+    printf("///                Developed by  @clarafelix - Out, 2021                    ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///                     = = = = = SIG-Recipes = = = = =                     ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            1. Módulo Receitas                                           ///\n");
+    printf("///            2. Módulo Cozinheiro                                         ///\n");
+    printf("///            3. Módulo Sobre                                              ///\n");
+    printf("///            0. Sair                                                      ///\n");
+
+    printf("///            Escolha um dos módulos indicados: ");
+    scanf("%c", &alt);
+    getchar();
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t<<< ... Aguarde ... >>>\n");
+    sleep(1);
+
+    return alt;
+
+    }
+
+    void telaSobre(void) {
+
+    system("clear||cls");
+    printf("\n");5
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///             Universidade Federal do Rio Grande do Norte                 ///\n");
+    printf("///                 Centro de Ensino Superior do Seridó                     ///\n");
+    printf("///               Departamento de Computação e Tecnologia                   ///\n");
+    printf("///                  Disciplina DCT1106 -- Programação                      ///\n");
+    printf("///         SIG-Recipes: Um Caderno Virtual de Receitas Culinárias          ///\n");
+    printf("///                Developed by  @clarafelix - Out, 2021                    ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///                    = = = = = SIG-Recipes = = = = =                      ///\n");
+    printf("///                                                                         ///\n");
+    printf("/// Projeto desenvolvido para a disciplina de Programação, curso de         ///\n");
+    printf("/// Sistemas de Informação/UFRN. Consiste na elaboração de uma caderno vir- ///\n");
+    printf("/// tual para armazenamento de receitas e posterior consultas. Tem por      ///\n");
+    printf("/// objetivo o desenvolvimento de um programa/projeto, utilizando-se da     ///\n");
+    printf("/// linguagem C, onde o usuário poderá cadastrar e armazenar suas receitas, ///\n"); 
+    printf("/// de forma semelhante a um caderno de anotações e/ou bloco de notas.      ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Pressione a tecla <ENTER> para continuar...\n");
+    getchar();
+
+    }
+
+    void telaEquipe(void) {
+
+    system("clear||cls");
+    printf("\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///             Universidade Federal do Rio Grande do Norte                 ///\n");
+    printf("///                 Centro de Ensino Superior do Seridó                     ///\n");
+    printf("///               Departamento de Computação e Tecnologia                   ///\n");
+    printf("///                  Disciplina DCT1106 -- Programação                      ///\n");
+    printf("///            SIG-Recipes: Um Caderno Virtual de Receitas Culinárias       ///\n");
+    printf("///                Developed by  @clarafelix - Out, 2021                    ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///                         = = = = = SIG-Recipes = = = = =                ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Este projeto exemplo foi desenvolvido por:                   ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Clara Patrícia Felix                                         ///\n");
+    printf("///            E-mail: clara.patricia.felix.700@ufrn.edu.br                 ///\n");
+    printf("///            Redes sociais: @prof_clarafelix                              ///\n");
+    printf("///            Repositório: https://github.com/ClaraFelix/SIG-Recipes       ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Pressione a tecla <ENTER> para continuar...\n");
+    getchar();
+
+    }
+
+
+    /// Funções do módulo receitas
+
+
+    void telaMenuReceitas(void) {
+
+    system("clear||cls");
+    printf("\n");
+    printf("/////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                       ///\n");
+    printf("///          ===================================================          ///\n");
+    printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+    printf("///     = SIG-Recipes: Um Caderno Virtual de Receitas Culinárias =        ///\n");
+    printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+    printf("///          ===================================================          ///\n");
+    printf("///                Developed by  @clarafelix - Out, 2021                  ///\n");
+    printf("///                                                                       ///\n");
+    printf("/////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                       ///\n");
+    printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+    printf("///           = = = = = = = = =  Receita = = = = = = = = = =              ///\n");
+    printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+    printf("///                                                                       ///\n");
+    printf("///           1. Cadastrar uma nova receita                               ///\n");
+    printf("///           2. Buscar os dados da receita                               ///\n");
+    printf("///           3. Excluir receita do sistema                              ///\n");
+    printf("///           0. Voltar ao menu principal                                ///\n");
+    printf("///                                                                       ///\n");
+    printf("///           Escolha a alternativa que deseja entrar:                    ///\n");
+    printf("///                                                                       ///\n");
+    printf("///                                                                       ///\n");
+    printf("/////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t<<< ... Aguarde ... >>>\n");
+    sleep(1);
+    return alt;
+
+    }
+
+    void telaCadastrarReceita(void){
     char nome_receita[20];
 
     struct recipes
@@ -73,22 +253,40 @@ void main(void){
     }
 
 
-/*int main(void) {
-   telaCadastrarReceitas();
-   telaMain();
-   telaSobreSIG();
-   telaEquipe();
-   telaMenuReceitas();
-   telaCadastrarReceitas();
-   telaBuscarReceita();
-   telaEditarReceita();
-   telaExcluirReceita();
-   return 0;
-}
+    void telaBuscarReceita(void) {
+    
+    char nome[20];
+
+    system("clear||cls");
+    printf("\n");
+    printf("/////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                       ///\n");
+   printf("///          ===================================================          ///\n");
+    printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+    printf("///     = SIG-Recipes: Um Caderno Virtual de Receitas Culinárias =        ///\n");
+    printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+    printf("///          ===================================================          ///\n");
+    printf("///                Developed by  @clarafelix - Out, 2021                  ///\n");
+    printf("///                                                                       ///\n");
+    printf("/////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                       ///\n");
+    printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+    printf("///           = = = = = = = = Buscar receita = = = = = = = =             ///\n");
+    printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+    printf("///                                                                       ///\n");
+    printf("///           Informe o nome da receita:                                 ///\n");
+    scanf(nome);
+    printf("///                                                                       ///\n");
+    printf("///                                                                       ///\n");
+    printf("/////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+    }
 
 // Funções
 
-void telacadastrarReceitas(void) {
+/*void telacadastrarReceitas(void) {
   
     char nome_receita[20];
 
@@ -102,96 +300,16 @@ void telacadastrarReceitas(void) {
     struct lista_ingredientes receita[10]; 
 }
 
-    system("clear||cls");
-    printf("\n");5
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                         ///\n");
-    printf("///             Universidade Federal do Rio Grande do Norte                 ///\n");
-    printf("///                 Centro de Ensino Superior do Seridó                     ///\n");
-    printf("///               Departamento de Computação e Tecnologia                   ///\n");
-    printf("///                  Disciplina DCT1106 -- Programação                      ///\n");
-    printf("///         SIG-Recipes: Um Caderno Virtual de Receitas Culinárias          ///\n");
-    printf("///                Developed by  @clarafelix - Out, 2021                    ///\n");
-    printf("///                                                                         ///\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                         ///\n");
-    printf("///                    = = = = = SIG-Recipes = = = = =                      ///\n");
-    printf("///                                                                         ///\n");
-    printf("/// Projeto desenvolvido para a disciplina de Programação, curso de         ///\n");
-    printf("/// Sistemas de Informação/UFRN. Consiste na elaboração de uma caderno vir- ///\n");
-    printf("/// tual para armazenamento de receitas e posterior consultas. Tem por      ///\n");
-    printf("/// objetivo o desenvolvimento de um programa/projeto, utilizando-se da     ///\n");
-    printf("/// linguagem C, onde o usuário poderá cadastrar e armazenar suas receitas, ///\n"); 
-    printf("/// de forma semelhante a um caderno de anotações e/ou bloco de notas.      ///\n");
-    printf("///                                                                         ///\n");
-    printf("///                                                                         ///\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-}
+    
 
 
 
-void telaMain(void) {
-    system("clear||cls");
-    printf("\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                         ///\n");
-    printf("///             Universidade Federal do Rio Grande do Norte                 ///\n");
-    printf("///                 Centro de Ensino Superior do Seridó                     ///\n");
-    printf("///               Departamento de Computação e Tecnologia                   ///\n");
-    printf("///                  Disciplina DCT1106 -- Programação                      ///\n");
-    printf("///          SIG-Recipes: Um Caderno Virtual de Receitas Culinárias         ///\n");
-    printf("///                Developed by  @clarafelix - Out, 2021                    ///\n");
-    printf("///                                                                         ///\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                         ///\n");
-    printf("///                     = = = = = SIG-Recipes = = = = =                     ///\n");
-    printf("///                                                                         ///\n");
-    printf("///            1. Módulo Receitas                                           ///\n");
-    printf("///            2. Módulo Cozinheiro                                         ///\n");
-    printf("///            3. Módulo Cadastrar receita                                  ///\n");
-    printf("///            4. Módulo Editar receita                                     ///\n");
-    printf("///            5. Módulo Sobre                                              ///\n");
-    printf("///            0. Sair                                                      ///\n");
-    printf("///                                                                         ///\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-}
+    
 
 
 
-void telaEquipe(void) {
-    system("clear||cls");
-    printf("\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                         ///\n");
-    printf("///             Universidade Federal do Rio Grande do Norte                 ///\n");
-    printf("///                 Centro de Ensino Superior do Seridó                     ///\n");
-    printf("///               Departamento de Computação e Tecnologia                   ///\n");
-    printf("///                  Disciplina DCT1106 -- Programação                      ///\n");
-    printf("///            SIG-Recipes: Um Caderno Virtual de Receitas Culinárias       ///\n");
-    printf("///                Developed by  @clarafelix - Out, 2021                    ///\n");
-    printf("///                                                                         ///\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                         ///\n");
-    printf("///                         = = = = = SIG-Recipes = = = = =                ///\n");
-    printf("///                                                                         ///\n");
-    printf("///            Este projeto exemplo foi desenvolvido por:                   ///\n");
-    printf("///                                                                         ///\n");
-    printf("///            Clara Patrícia Felix                                         ///\n");
-    printf("///            E-mail: clara.patricia.felix.700@ufrn.edu.br                 ///\n");
-    printf("///            Redes sociais: @prof_clarafelix                              ///\n");
-    printf("///            Repositório: https://github.com/ClaraFelix/SIG-Recipes       ///\n");
-    printf("///                                                                         ///\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-}
+/*void telaEquipe(void) {
+    
 
 
     system("clear||cls");
@@ -241,65 +359,10 @@ void telaEquipe(void) {
 }
 
 void telaMenuReceitas(void) {
-    system("clear||cls");
-    printf("\n");
-    printf("/////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                       ///\n");
-    printf("///          ===================================================          ///\n");
-    printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
-    printf("///     = SIG-Recipes: Um Caderno Virtual de Receitas Culinárias =        ///\n");
-    printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
-    printf("///          ===================================================          ///\n");
-    printf("///                Developed by  @clarafelix - Out, 2021                  ///\n");
-    printf("///                                                                       ///\n");
-    printf("/////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                       ///\n");
-    printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
-    printf("///           = = = = = = = = =  Receita = = = = = = = = = =              ///\n");
-    printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
-    printf("///                                                                       ///\n");
-    printf("///           1. Cadastrar uma nova receita                               ///\n");
-    printf("///           2. Buscar os dados da receita                               ///\n");
-    printf("///           3. Atualizar receita                                       ///\n");
-    printf("///           4. Excluir receita do sistema                              ///\n");
-    printf("///           0. Voltar ao menu principal                                ///\n");
-    printf("///                                                                       ///\n");
-    printf("///           Escolha a opção desejada:                                   ///\n");
-    printf("///                                                                       ///\n");
-    printf("///                                                                       ///\n");
-    printf("/////////////////////////////////////////////////////////////////////////////\n");
-    printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-}
-
+    
 
 void telaBuscarReceita(void) {
-    system("clear||cls");
-    printf("\n");
-    printf("/////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                       ///\n");
-   printf("///          ===================================================          ///\n");
-    printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
-    printf("///     = SIG-Recipes: Um Caderno Virtual de Receitas Culinárias =        ///\n");
-    printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
-    printf("///          ===================================================          ///\n");
-    printf("///                Developed by  @clarafelix - Out, 2021                  ///\n");
-    printf("///                                                                       ///\n");
-    printf("/////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                       ///\n");
-    printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
-    printf("///           = = = = = = = = Buscar receita = = = = = = = =             ///\n");
-    printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
-    printf("///                                                                       ///\n");
-    printf("///           Informe o nome da receita:                                 ///\n");
-    printf("///                                                                       ///\n");
-    printf("///                                                                       ///\n");
-    printf("/////////////////////////////////////////////////////////////////////////////\n");
-    printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-}
+    
 
 
 
