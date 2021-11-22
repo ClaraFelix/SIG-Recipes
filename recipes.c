@@ -165,8 +165,43 @@ char telaPrincipal(void) {
 
 
     /// Funções do módulo receitas
-    
 
+
+    void telaMenuReceitas(void) {
+
+    system("clear||cls");
+    printf("\n");
+    printf("/////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                       ///\n");
+    printf("///          ===================================================          ///\n");
+    printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+    printf("///     = SIG-Recipes: Um Caderno Virtual de Receitas Culinárias =        ///\n");
+    printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+    printf("///          ===================================================          ///\n");
+    printf("///                Developed by  @clarafelix - Out, 2021                  ///\n");
+    printf("///                                                                       ///\n");
+    printf("/////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                       ///\n");
+    printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+    printf("///           = = = = = = = = =  Receita = = = = = = = = = =              ///\n");
+    printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+    printf("///                                                                       ///\n");
+    printf("///           1. Cadastrar uma nova receita                               ///\n");
+    printf("///           2. Buscar os dados da receita                               ///\n");
+    printf("///           3. Atualizar receita                                       ///\n");
+    printf("///           4. Excluir receita do sistema                              ///\n");
+    printf("///           0. Voltar ao menu principal                                ///\n");
+    printf("///                                                                       ///\n");
+    printf("///           Escolha a alternativa que deseja entrar:                    ///\n");
+    printf("///                                                                       ///\n");
+    printf("///                                                                       ///\n");
+    printf("/////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t<<< ... Aguarde ... >>>\n");
+    sleep(1);
+    return alt;
+
+    }
 
 void main(void){
     char nome_receita[20];
@@ -295,38 +330,7 @@ void main(void){
 }
 
 void telaMenuReceitas(void) {
-    system("clear||cls");
-    printf("\n");
-    printf("/////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                       ///\n");
-    printf("///          ===================================================          ///\n");
-    printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
-    printf("///     = SIG-Recipes: Um Caderno Virtual de Receitas Culinárias =        ///\n");
-    printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
-    printf("///          ===================================================          ///\n");
-    printf("///                Developed by  @clarafelix - Out, 2021                  ///\n");
-    printf("///                                                                       ///\n");
-    printf("/////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                       ///\n");
-    printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
-    printf("///           = = = = = = = = =  Receita = = = = = = = = = =              ///\n");
-    printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
-    printf("///                                                                       ///\n");
-    printf("///           1. Cadastrar uma nova receita                               ///\n");
-    printf("///           2. Buscar os dados da receita                               ///\n");
-    printf("///           3. Atualizar receita                                       ///\n");
-    printf("///           4. Excluir receita do sistema                              ///\n");
-    printf("///           0. Voltar ao menu principal                                ///\n");
-    printf("///                                                                       ///\n");
-    printf("///           Escolha a opção desejada:                                   ///\n");
-    printf("///                                                                       ///\n");
-    printf("///                                                                       ///\n");
-    printf("/////////////////////////////////////////////////////////////////////////////\n");
-    printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-}
-
+    
 
 void telaBuscarReceita(void) {
     system("clear||cls");
