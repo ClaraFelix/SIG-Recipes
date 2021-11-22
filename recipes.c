@@ -203,7 +203,7 @@ char telaPrincipal(void) {
 
     }
 
-void main(void){
+    void telaCadastrarReceita(void){
     char nome_receita[20];
 
     struct recipes
