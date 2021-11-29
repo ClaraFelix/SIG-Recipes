@@ -20,15 +20,6 @@ void telaPrincipal(void);
 void telaSobre(void);
 void telaEquipe(void);
 
-
-
-void moduloCozinheiros(void);
-void telaMenuCozinheiros(void);
-void telaCadastrarCozinheiros(void);
-void telaBuscarCozinheiros(void);
-void telaEditarCozinheiros(void);
-void telaExcluirCozinheiros(void);
-
 // Programa principal
 
 int main(void) {
@@ -37,7 +28,7 @@ int main(void) {
     do
     {
         alternativa = telaMenuReceitas();
-        switch (alternativa)
+        switch (alternativa);
         {
         case '1': moduloReceitas();
             break;
