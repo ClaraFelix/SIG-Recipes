@@ -134,7 +134,10 @@ int cozinheiros(void) {
     printf("///                                                                       ///\n");
     printf("/////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    printf(
+    "\t\t\t>>> 
+    Clique <ENTER> para prosseguir..\n"
+    );
     getchar(1);
     }
 
@@ -166,7 +169,10 @@ int cozinheiros(void) {
     printf("///                                                                       ///\n");
     printf("/////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    printf(
+    "\t\t\t>>> 
+    Clique <ENTER> para prosseguir..\n"
+    );
     getchar(1);
     }
 
@@ -197,7 +203,10 @@ int cozinheiros(void) {
     printf("///                                                                       ///\n");
     printf("/////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    printf(
+    "\t\t\t>>> 
+    Clique <ENTER> para prosseguir..\n"
+    );
     getchar(1);
     }
 
