@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include "receitas.h"
 
+
 /// Funções do módulo receitas
 
 int receitas(void) {
@@ -149,7 +150,10 @@ int receitas(void) {
     printf("///                                                                       ///\n");
     printf("/////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    printf(
+    "\t\t\t>>> 
+    Clique <ENTER> para prosseguir..\n"
+    );
     getchar();
     }
 
@@ -182,7 +186,10 @@ int receitas(void) {
     printf("///                                                                       ///\n");
     printf("/////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    printf(
+    "\t\t\t>>> 
+    Clique <ENTER> para prosseguir..\n"
+    );
     getchar();
     }
 
@@ -216,7 +223,10 @@ int receitas(void) {
     printf("///                                                                       ///\n");
     printf("/////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    printf(
+    "\t\t\t>>> 
+    Clique <ENTER> para prosseguir..\n"
+    );
     getchar();
     }
 
