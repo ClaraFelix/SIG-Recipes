@@ -67,3 +67,40 @@ int validarCPF(char *cpf)
     //Caso contrário, o CPF será válido com o retorno: [1]
     return 1;
 } 
+
+//Responsável por verificar o nome da receita cadastrada pelo usuário/cozinheiro
+//O cozinheiro deverá cadastrar sua receita com até 20 letras
+//Para isso, a função irá verificar a string e apresentar o seguinte comportamento:
+//Se a string for válida o programa deverá retorna 0, caso contrário retornará -1 para uma string inválida
+
+int verif_receita(char *receita)
+{
+    if ( strlen(receita) != 20 )
+    {
+        printf("O nome da receira deverá conter 20 letras!\n");
+        return -1;
+    }
+    char num[20] = {'0','1','2','3','4','5','6','7','8','9', '10', '11', '12', '13', '14','15','16','17','18','19'};
+    int i=0,count,nmrs = 0;
+    while( i <= strlen(receita))
+    {
+        for (count = 0; count < 20; count++ )
+        {
+            if ( receita[i] == num[count])
+            {
+                nmrs++;    
+            }
+        }
+        receita++;
+        i++;
+    }
+    if ( nmrs != 0 )
+    {
+        return -1;
+    }
+    else
+    {
+        return 0;
+    }
+   
+}
