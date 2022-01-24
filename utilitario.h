@@ -12,3 +12,4 @@
 
 void clear (void);
 int validarCPF(char);
+void verif_receita(char);
